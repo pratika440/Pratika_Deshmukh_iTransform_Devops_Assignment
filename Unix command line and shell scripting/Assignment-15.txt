@@ -1,0 +1,19 @@
+Create a script that prompts the user for a number. That number is to be used to display a simple message to the terminal X number of times (where X is the number captured from the user input). The message should include an indication of the number for each count the message is displayed.
+
+Ans: 
+
+i=1
+while [ $i -le $1 ]
+do
+echo "$i Hello World"
+i=$(($i+1))
+done
+
+
+Output:
+
+1 Hello World
+2 Hello World
+3 Hello World
+4 Hello World
+5 Hello World

@@ -1,0 +1,264 @@
+Objective:- Assignments will help trainees to understand the basics of unix command and how to explore and use it.
+
+DO NOT copy paste commands from internet, you can take help of the Unix in-built command manual.
+
+Be Honest to yourself!
+
+Important command and option to learn unix commands:-
+man Command
+Example:-
+man ls
+
+--help Option
+Example:-
+ls --help
+
+NOTE:- Always use "man" command before using any unix commands and read about it and its options and how to use it.
+
+Assignments:-
+
+1) List the contents of a directory and their attributes
+   = $ls
+
+2) Long list the content with file, directory ownership, permissions,sizes, etc…
+   = $ls -l 
+ 
+3) Display the size of the file in human readable format
+   = $ls -lh 
+
+4) Show all files and folders including hidden one
+   = $ls -a and $ls -al
+
+5) list directories recursively
+   = $ls -R
+
+6) Sort the files by size with largest at the top
+   = $ls -laSh
+
+7) Sort the files by last time modified displaying the newest first.
+   = $ls -lt
+
+8) Diplay the location of a program/command, where it is installed.
+   = $realpath <name> and locate 
+
+9) Which command is used to switch directory from one to another
+   = $cd (directory name)- here cd is change directory which will change the directory from one to another and computer is the directory name.
+
+
+10) List all the environment variables set for the current shell environment
+   = $env command
+
+11) Did you notice something in the output of "env" command?
+   = Using env, variables may be added or removed, and existing variables may be changed by assigning new values to them.
+
+12) Which command is used to print the text or any variables value in the Console/Terminal?
+   = $echo
+
+13) Print the value of the env variable "PATH" on the console
+   = $printenv
+
+14) Is linux a case-sensitive operating system?
+   = Yes it is case-sensitive operating system.
+
+15) Is, "Ls" same as "ls"?
+   = No, because UNIX is case sensitive programming language and Ls is not a command.
+
+16) Display your currently logged in user
+   = $whoami
+
+17) how do you change the currrently logged in user to another user?
+   = STEP1: $su –l [USERNAME] command.
+     STEP2: Password- enter some password.
+     STEP3: $whoami- check if switched to another user
+
+18) Which command is used to leave a shell environment that you are currently logged in to?
+   = $exit and $^d
+
+19) How do you reboot the system?
+   = $sudo reboot
+
+20) How do you shutdown the system?
+   = $sudo shutdown
+
+21) Display all the major running processes in the system
+   =   $ ps -A
+    PID TTY          TIME CMD
+      1 ?        00:00:00 tini
+      7 ?        00:00:00 sh
+      8 ?        00:00:05 node
+     20 ?        00:00:00 sshd
+    257 pts/0    00:00:00 bash
+    402 pts/0    00:00:00 ps
+
+22) Understand the output of command used in above question of displaying processes, explain the meaning of each column and what data it displays?
+   = Here PID is process id everytime you run a command, a program is run and a process is created for it.
+         TTY is the name of the console that the user is logged into.
+         TIME is the amount of CPU in minutes and seconds that the process has been running.
+         CMD is the name of the command that launched the process.
+
+23) Display the name of the system kernel
+   = $uname -s
+
+24) display the kernel release number
+   = $uname -r
+
+25) display teh machine type of the current kernel
+   = $uname -m
+
+26) Display the name of the operating system that the kernel is running on
+   = $uname -o
+
+27) Display all info that uname command can show.
+   = $uname -a
+
+28) Display the name of directory that you are currently pointing to
+   = $pwd
+
+29) change the current directory to another directory that you have in your system.
+   = $cd filename
+
+30) Go up one directory
+   = $cd ..
+
+31) Return to last directory
+   = $cd ../..
+
+32) change the current directory to home(logged in user's) directory
+   = cd
+
+33) How to check all the command used from the prompt (Command History)
+   = $sudo useradd -m -d
+
+34) In which file the history of commands are stored in?
+   = command history is stored in a file (.bash_history) in home directory
+
+35) How many lines of history does the system keep and from where you can change it?
+   = 1000 lines of history
+      $echo $HISTFILE
+
+36) How can you modify bash's history behaviour
+   = $HISTSIZE and $HISTTIMEFORMAT
+
+37) Display all the commands entered so far, now, try to run a particular command from the history list without typing that command.
+   = history command and can use the upper arrow to run particular command.
+
+NOTE:- TAB key is your friend when it comes to command completion and having long file and directory names autocompleted at the bash prompt for you. JUST BE LAZY AND USE TAB KEY FOR AUTO COMPLETION ;-)
+
+38) What are the different types of shell and where are they used and how do we use them?
+   = 1.C shell (csh)-/bin/csh.
+     2.Bourne Shell (sh)-/bin/sh and /sbin/sh.
+     3.Korn shell (ksh)-/bin/ksh
+     4.Bourne Again shell ( bash)-/bin/bash
+
+
+39) What is the difference between login shell and non-login shell?
+   = Login shell output will be -bash or -su.
+     Non logins shell output will be bash or su
+
+40) How do we start login shell and non-login shell?
+   = A Login shell is started after a successful login, using /bin/login, by reading the /etc/passwd file. A Non login shell is started by a program without a login.The program just passes the name of the shell executable.
+
+41) What happens when you start a login shell (which files are read and used and Why)?
+   = Login process calls ~/.bash_profile
+
+42) What happens when you start a non-login shell (Which files are read and used and Why)?
+   = Non-login process(shell) calls ~/.bashrc
+
+43) What are Shell Configuration Files, why do we need it?
+   = They initialize and configure a shell upon login and. perform cleanup operations upon logout and used for user applications, server processes and operating system settings.
+
+44) Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+   =  /etc/profile -> /etc/profile.d/ -> ~/.bash_profile -> ~/.bashrc -> etc/bashrc
+
+45) What are Shell Variables, list major shell variables and what do they represent?
+   = Variables store the data in the form of characters and numbers.Shell variables are used to store information and they can by the shell only.
+      "variable_name=variable_value". For example, the command "set FILE_NAME=file1" creates the shell variable named "FILE_NAME" with a value of "file1".
+
+46) How we see all our env variables?
+   = printenv | more
+
+47) How we see all env variables in alphabical order?
+   = printenv | sort
+
+48) What Format does the env var and its values are stored?
+   = Key value pair
+
+49) How do you create your own varible?
+   = variable_name=variable_value
+
+50) How do you start a new bash shell?
+   = first make file like vi filename.sh edit some text in file with first line #!/bin/sh save text then use bash filename.sh
+
+51) Difference between Local/Shell variables to Global Variable
+   = Local variable is declared inside a function whereas Global variable is declared outside the function. Local variables are created when the function has started execution and is lost when the function terminates, on the other hand, Global variable is created as execution starts and is lost when the program ends.
+
+52) Making a variable accessible from other the shell in the system.
+   = ~/.profile
+
+53) Show the real life use case of exporting a variable
+   = i) You can export a variable from parent process to the child processes. 
+     ii) Simply set the value for a variable before exporting " export name="[=value]"
+     iii) export -p to check the exported variables
+
+54) Convert the above script file into a command, The file should run with "myappp" instead of "myapp.sh"
+   = - Give execution rights to the script file using chmod u+x file_name.sh
+     - Append the path of the exectuable script file to path cariable in .bash_profile file
+     - Write a code in script file starting with shebang "#!/usr/bin/env bash" and then save it.
+     - Now you need to source .bash_profile once then you can run your myapp.sh as a command.
+
+55) What is Globbing? Explain in depth with examples?
+   = Globbing is an operation that recognizes the wildcard pattern and expands it into its path name.
+
+56) List all entries with extension ".sh"
+   = ls *.sh
+
+57) List all entries with numbers in it.
+   = ./line_count.sh file1.txt 
+
+58) List all entries that starts with a character and ends with a number
+   = egrep "[^a-z] [$0-9]" filename
+
+59) List all entries that name length more than 5 characters
+   = ls ??????*
+
+60) What is Quoting? and Why do we need it?
+   = Quoting is used to remove the special meaning of certain characters or words to the shell. Quoting can be used to disable special treatment for special characters, to prevent reserved words from being recognized as such, and to prevent parameter expansion.
+
+61) Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+   = 1. echo 'Welcome to coding world!'-this will easily print the line.
+       2. echo  hello to learning/
+                lets start learning/ - continuous writing
+                with coding.
+       3. echo 'hello/'
+
+62) How do you find a particular files/directories based on a particular search criteria?
+HINT:- look for commands -> locate, find and whereis
+   = find <parameters> ex: find *.txt
+
+63) Write major difference between locate, find and whereis?
+   = locate simply looks its database and reports the file location whereas find does not use a database, it traverses all the directories and their sub directories and looks for files matching the given criterion and whereis commands only give the location of installed application.
+
+64) How Globbing is different from locate, find and whereis?
+   = Globbing is mainly used to match filenames or searching for content in a file.locate simply looks its database and reports the file location whereas find does not use a database, it traverses all the directories and their sub directories and looks for files matching the given criterion and whereis commands only give the location of installed application. 
+
+65) Explain the Linux File System.
+   = file system  makes a table which stores data about files(and folders) like File name. When it was created. When it was modified. Who owns it. Who are allowed to access it
+
+66) Explain absolute and Relative Paths
+   = Absolute path starts from the directory root (/) and goes up to the actual object (file or directory). ex:/root/home/Anjali/index.
+      Relative path starts from the current directory and goes up to the actual object. ex:../../file-user want to access a file that is available two directories above.
+
+67) What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+   = touch filename-  easiest way to create a new file in Linux is by using the touch command. ex: touch index.txt.
+       >filename- redirection operator is a name for a character that changes the destination where the results are displayed. ex: >file1.txt.
+       cat>filename-cat command is short for concatenate. It can be used to output the contents of several files, one file, or even part of a file. ex: cat> file2.txt
+       echo'sample text'> filename-echo command will duplicate whatever you specify in the command, and put the copy into a file. ex:echo 'Hello'file3.txt
+
+68) In how many ways we can delete the files from linux system? write an example of each and teh difference between them.
+   = rm filename- remove particular file, unlink filename- this also removes single file, rm *.html- this will delete all the files of html, rm filename1 filename2 filename3-this will remove multiple files.
+
+69) Archiving files using linux command, write a command to archive set of files from linux commands.
+   = tar -cvf myfiles.tar file1 file2
+
+70) Extract the archived files from the above step.
+   = tar -xvf myfiles.tar

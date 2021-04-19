@@ -1,0 +1,29 @@
+Develop a script that creates, sets and displays two variables to the terminal when run. Within this script, add comments to explain what the script is doing, what each variable is and, using inline comments, what each command is doing.
+
+Ans:
+
+#!/usr/bin/bash
+
+#Creates and displays two variable as output
+
+
+# this command sets value Venkatesh and hariharan to variable Firstname 
+# and Lastname respectively
+
+Firstname=Prajakta
+Lastname=Patil
+
+
+# this command is used to print the variable value assigned to them
+
+
+echo "Firstname is " $Firstname
+echo "Lastname is " $Lastname
+
+
+Output:
+
+$ ./hiiScript.sh
+Firstname is  Pratika
+Lastname is  Pradip
+
