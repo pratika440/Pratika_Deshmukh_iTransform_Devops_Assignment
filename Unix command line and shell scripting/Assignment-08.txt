@@ -12,8 +12,8 @@ echo "FIRSTNAME:$1"
 echo "LASTNAME:$2"
 echo "USERAGE:$3"
 
-#num=$(($3+10))
-#echo "Hello $1 $2 $num"
+num=$(($3+10))
+echo "Hello $1 $2 $num"
 
 
 Output:

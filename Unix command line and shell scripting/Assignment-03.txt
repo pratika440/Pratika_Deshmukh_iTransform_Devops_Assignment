@@ -2,20 +2,10 @@ Develop a script that creates, sets and displays two variables to the terminal w
 
 Ans:
 
-#!/usr/bin/bash
+!/usr/bin/bash
 
-#Creates and displays two variable as output
-
-
-# this command sets value Venkatesh and hariharan to variable Firstname 
-# and Lastname respectively
-
-Firstname=Prajakta
-Lastname=Patil
-
-
-# this command is used to print the variable value assigned to them
-
+Firstname=Pratika
+Lastname=Deshmukh
 
 echo "Firstname is " $Firstname
 echo "Lastname is " $Lastname
